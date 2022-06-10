@@ -1,172 +1,224 @@
-import React,{useEffect} from "react"
-import styled from "styled-components"
-import Aos from "aos"
-import "aos/dist/aos.css"
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { AiTwotoneDelete, AiFillEdit } from "react-icons/ai";
+// import pix from "./gg.jpg";
+// import axios from "axios";
+// import { useDispatch, useSelector } from "react-redux";
+// import { addMemory } from "./GlobalState";
+// import moment from "moment";
 
-const Cars = ()=>{
-   
-    useEffect(()=>{
-        Aos.init({duration:1500}) 
-          },[])
-    return(
-        <Container data-aos="fade-up">
-            <Wrapper>
-              
-                <Card>
-                    <CardWrap>
-                        <Name>
-    Ferrari204
-                        </Name>
-                        <Image>
-                        <img src = "/images/chick.jpg" alt="images of rice"/>
-                        </Image>
-                        <Down>
-                            <Price>
-                                $9000.00
-                            </Price>
-                            <Add>+</Add>
-                        </Down>
-                    </CardWrap>
-                </Card>
-                <Card>
-                    <CardWrap>
-                        <Name>
-    iwatch200
-                        </Name>
-                        <Image>
-                        <img src = "/images/chick.jpg" alt="images of rice"/>
-                        </Image>
-                        <Down>
-                            <Price>
-                                $9000.00
-                            </Price>
-                            <Add>+</Add>
-                        </Down>
-                    </CardWrap>
-                </Card>
-                <Card>
-                    <CardWrap>
-                        <Name>
-    Sneaks
-                        </Name>
-                        <Image>
-                        <img src = "/images/chick.jpg" alt="images of rice"/>
-                        </Image>
-                        <Down>
-                            <Price>
-                                $9000.00
-                            </Price>
-                            <Add>+</Add>
-                        </Down>
-                    </CardWrap>
-                </Card>
-                <Card>
-                    <CardWrap>
-                        <Name>
-    Ferrari204
-                        </Name>
-                        <Image>
-                        <img src = "/images/chick.jpg" alt="images of rice"/>
-                        </Image>
-                        <Down>
-                            <Price>
-                                $9000.00
-                            </Price>
-                            <Add>+</Add>
-                        </Down>
-                    </CardWrap>
-                </Card>
-                
-            </Wrapper>
-        </Container>
-    )
-}
+const Fries = () => {
+	// const dispatch = useDispatch();
+	// const [getData, setGetData] = useState([]);
+	// const user = useSelector((state) => state.currentUser);
+	// const memo = useSelector((state) => state.memories);
 
-export default Cars
+	// const id = user._id;
 
-const Container= styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-width:100%;
-height:100%;
-margin-top:30px;
+	// const onGetData = async () => {
+	// 	try {
+	// 		const mainRoute = "http://localhost:2331";
+	// 		const url = `${mainRoute}/api/diary/${id}`;
 
+	// 		await axios.get(url).then((res) => {
+	// 			setGetData(res.data.data.diary);
+	// 			dispatch(addMemory(res.data.data.diary));
+	// 			console.log(res.data.data)
+	// 		});
 
-`
-const Wrapper= styled.div`
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-align-items :center;
-margin:10px 0;
+	// 		console.log(getData);
+	// 	} catch (error) {
+	// 		console.log(error.message);
+	// 	}
+	// };
 
+	// useEffect(() => {
+	// 	onGetData();
+	// }, []);
 
+	return (
+		<Container>
+			<Wrapper>
+				 
+					
+						
+							<Card >
+						<Image src="/images/chick.jpg" />
 
-width:1200px;
+						<TextHolder>
+							<Holder>
+								<Title>title</Title>
+								<Icon />
+							</Holder>
+							<Message>message</Message>
+							<Space />
+							<Holder1>
+								<Date>
+									
+									</Date>
+								<Button
+								
+								>
+									Fav
+								</Button>
+							</Holder1>
+						</TextHolder>
+					</Card>
+                    <Card >
+						<Image src="/images/chick.jpg" />
 
-@media(max-width:1200px){
-    width:90%;  
-}
-@media(max-width:800px){
-    justify-content:center;
+						<TextHolder>
+							<Holder>
+								<Title>title</Title>
+								<Icon />
+							</Holder>
+							<Message>message</Message>
+							<Space />
+							<Holder1>
+								<Date>
+									
+									</Date>
+								<Button
+								
+								>
+									Fav
+								</Button>
+							</Holder1>
+						</TextHolder>
+					</Card>
+                    <Card >
+						<Image src="/images/chick.jpg" />
 
+						<TextHolder>
+							<Holder>
+								<Title>title</Title>
+								<Icon />
+							</Holder>
+							<Message>message</Message>
+							<Space />
+							<Holder1>
+								<Date>
+									
+									</Date>
+								<Button
+								
+								>
+									Fav
+								</Button>
+							</Holder1>
+						</TextHolder>
+					</Card>
+						
+					<Card >
+						<Image src="/images/chick.jpg" />
 
-}
-`
+						<TextHolder>
+							<Holder>
+								<Title>title</Title>
+								<Icon />
+							</Holder>
+							<Message>message</Message>
+							<Space />
+							<Holder1>
+								<Date>
+									
+									</Date>
+								<Button
+								
+								>
+									Fav
+								</Button>
+							</Holder1>
+						</TextHolder>
+					</Card>
+			</Wrapper>
+		</Container>
+	);
+};
 
-const Card= styled.div`
-background:white;
-width:220px;
-padding:15px;
-height:100%;
-border-radius:10px;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-@media(max-width:800px){
-    justify-content:center;
-margin:10px 0
+export default Fries;
 
-}
-`
-const CardWrap= styled.div``
-const Name= styled.div`
-width:100px;
-height:40px;
-border-radius:20px;
-display:flex;
-justify-content:center;
-align-items:center;
-font-family:montserrat;
-background:red;
-color:#fff
-`
-const Image= styled.div`
-width:200px;
-img{
-    width:100%
-}
-`
-const Down= styled.div`
-display:flex;
-width:220px;
-justify-content:space-between;
-align-items:center;
+const Button = styled.div`
+	transition: all 350ms;
+	color: white;
+	text-decoration: none;
+	background-color: green;
+	padding: 5px 15px;
 
-`
-const Price= styled.div`
-color:green;
-font-family:montserrat
-`
-const Add= styled.div`
-width:30px;
-height:30px;
-background:red;
-color:#fff;
-font-family:montserrat;
-font-weight:bold;
-font-size:25px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center
-`
+	:hover {
+		cursor: pointer;
+		transform: scale(1.02);
+	}
+`;
+
+const Date = styled.div`
+	font-weight: 500;
+	font-size: 13px;
+`;
+
+const Icon = styled(AiFillEdit)`
+	color: red;
+	font-size: 25px;
+	transition: all 350ms;
+	transform: scale(1);
+	transform-origin: center;
+	:hover {
+		cursor: pointer;
+		transform: scale(1.01);
+	}
+`;
+const Space = styled.div`
+	margin: 10px 0;
+`;
+const Holder1 = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+`;
+const Holder = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+const Message = styled.div`
+	color: gray;
+	font-size: 13px;
+`;
+
+const Title = styled.div`
+	text-transform: uppercase;
+	font-weight: 500;
+`;
+
+const TextHolder = styled.div`
+	padding: 5px 10px;
+`;
+
+const Image = styled.img`
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	background-color: darkorange;
+`;
+
+const Card = styled.div`
+	margin: 10px;
+	width: 280px;
+	min-height: 320px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+`;
+
+const Wrapper = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 40px;
+`;
+
+const Container = styled.div`
+	padding-top: 70px;
+	width: 100%;
+	min-height: calc(100vh - 70px);
+	height: 100%;
+`;
