@@ -202,7 +202,7 @@ const Image = styled.img`
 
 const Card = styled.div`
 	margin: 10px;
-	width: 300px;
+	width: 280px;
 	min-height: 320px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 	border-radius: 10px 10px 0 0;
