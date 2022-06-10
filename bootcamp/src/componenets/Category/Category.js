@@ -80,12 +80,13 @@ border-radius:20px;
 display:flex;
 justify-content:center;
 align-items:center;
+flex-wrap:wrap;
 font-family:montserrat;
 background:#fff;
-border:1px solid red;
-color:red;
+border:1px solid orange;
+color:orange;
 :hover{
-    background:red;
+    background:orange;
     cursor:pointer;
     color:#fff;
     transition:all 300ms;
@@ -98,8 +99,5 @@ color:red;
 
  
 }
-@media(max-width:430px){
- width:80px;   
- font-size:16px;
-}
+
 `
