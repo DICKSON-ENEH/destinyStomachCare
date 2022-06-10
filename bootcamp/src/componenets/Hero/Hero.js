@@ -76,7 +76,7 @@ text-align: center;
 }
 `
 const Text = styled.div`
-width:350px;
+width:300px;
 font-size: 16px;
 font-family: montserrat;
 font-weight: 400;
