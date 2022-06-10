@@ -24,7 +24,7 @@ const Category =()=>{
             <First onClick ={changed}>Fries</First>
             <First onClick ={changers}>Soups</First>
             {
-                    toggle? null:<Rice/>
+                    toggle? <Rice/>:null
                 }
                  {
                     toggled? <Fries/>:null
@@ -45,7 +45,7 @@ export default Category
 const Container = styled.div`
 display:flex;
 justify-content:center;
-
+overflow:hidden;
 align-items:center;
 width:100%;
 height:100%;
