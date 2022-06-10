@@ -1,8 +1,13 @@
-import React from "react"
+import React, {useEffect} from "react"
 import pix from "./hero.jpg"
 import styled from 'styled-components'
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Hero = ()=>{
+    useEffect(()=>{
+Aos.init({duration:1500})
+    }, [])
     return(
         <Div>
  <Wrapper>
@@ -14,7 +19,7 @@ const Hero = ()=>{
 </Text>
 <Button>Get started</Button>
      </Left>
-     <Right>
+     <Right data-aos="fade-left">
 <Image src = {pix}/>
 {/* <img src ={pix} alt="hero"/> */}
     
