@@ -37,7 +37,8 @@ height:100%;
 min-height:calc(100vh - 70px);
 display:flex;
 align-items:center;
-justify-content:center
+justify-content:center;
+overflow:hidden;
 `
 const Wrapper = styled.div`
 width:1200px;
@@ -62,6 +63,7 @@ display: flex;
 justify-content:center;
 align-items: center;
 flex-direction: column;
+overflow:hidden;
 }
 `
 const Head = styled.div`
@@ -99,7 +101,7 @@ font-family: montserrat;
 const Right = styled.div`
 flex:0.5;
 
-/* background: blue; */
+
 
 `
 const Image = styled.img`
@@ -110,7 +112,7 @@ border-radius: 50%;
 
 object-fit: cover;
 @media(max-width:768px){
-    flex-direction:column-reverse;
+    
     width:300px;
 height:300px;
 border-radius: 50%;
